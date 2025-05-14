@@ -1,0 +1,135 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  min-height: 300px;
+  width: 400px;
+  color: black;
+  background: linear-gradient(120deg, #5fbff7, #ffd44a);
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  border: 4px solid white;
+  border-radius: 12px;
+  padding: 20px 40px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.card h2 {
+  margin-bottom: 12px;
+}
+
+.card p {
+  margin: 6px 0;
+}
+
+.fab-position {
+  left: -40%;
+}
+
+.padding-bottom-40px{
+  padding-bottom: 40px;
+}
+
+.card-sub-container {
+  text-align: left; 
+  background-color: #FAF3E0;
+  opacity: 0.8;
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.input-style {
+  all: unset;
+  width: 500px;
+}
+
+.input-style::placeholder { 
+  color: black; 
+}
+
+.form-container {
+  background-color:rgb(159, 207, 235);
+  color: black;
+  display: flex;
+  gap: 12px;        
+  width: 100%;
+  border-radius: 8px;
+}
+.form-container button {
+  transition: 0.5s ease;
+  background-color:rgb(203, 180, 103);
+  border: none;
+  border-radius: 8px;
+}
+
+.form-container button:hover {
+  background-color: #357ABD;
+}
+
+.level-style-beginner{
+  color: white;
+  background-color:rgb(64, 180, 68);
+  border-radius: 16px;
+}
+
+.level-style-advanced{
+  color: white;
+  background-color:rgb(241, 188, 63);
+  border-radius: 16px;
+}
+
+.like {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.button-style {
+  all: unset;
+  padding: 8px 4px;
+  width: 100%;
+  font-size: 16px;
+  transition: 1s ease;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  transition: all 1s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.button-style.beginner::before {
+  content: '你已经失败了，真正要摆的人是不会学习的';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #5fbff7, #ffd44a);
+  transition: all 1s;
+  z-index: 0;
+}
+.button-style.advanced::before {
+  content: '孰不退款';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #5fbff7, #ffd44a);
+  transition: all 1s;
+  z-index: 0;
+}
+.button-style:hover::before{
+  left: 0;
+}
+.button-container {
+  font-size: 20px;
+}
