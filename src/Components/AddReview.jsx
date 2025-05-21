@@ -1,5 +1,5 @@
 import { useState } from 'react'
-const AddComment = ({addComment, cardId, onCommentAdded}) => {
+const AddReview = ({addReview, cardId, onReviewAdded}) => {
   const [content, setContent] = useState('')
   const handleChange = (e) => {
     setContent(e.target.value);
@@ -7,16 +7,16 @@ const AddComment = ({addComment, cardId, onCommentAdded}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addComment(content, cardId);
-    onCommentAdded();
+    addReview(content, cardId);
+    onReviewAdded();
     setContent('');
   }
   return (
     <form onSubmit={handleSubmit} className='form-container'>
-      <input name='comment' className='input-style' type="text" placeholder='写点什么吧' value={content} onChange={handleChange}/>
+      <input name='review' className='input-style' type="text" placeholder='写点什么吧' value={content} onChange={handleChange}/>
       <button>+</button>
     </form>
   )
 }
 
-export default AddComment
+export default AddReview

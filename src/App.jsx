@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import CourseCardList from '../components/CourseCardList'
+import CourseCardList from './components/CourseCardList'
 
 function App() {
   const [cards, setCards] = useState([
@@ -12,8 +12,9 @@ function App() {
       language: '不用言语',
       duration: '永远',
       location: '自己家',
-      comments: ['生活必需品', '只要能学到这个，我什么都会做的'],
-      difficulty: 'beginner'
+      reviews: ['生活必需品', '只要能学到这个，我什么都会做的'],
+      difficulty: 'beginner',
+      isCompleted: 0
     },
     {
       id: 2,
@@ -23,21 +24,22 @@ function App() {
       language: '中文',
       duration: '四个月',
       location: '网课',
-      comments: ['非常简单'],
-      difficulty: 'advanced'
+      reviews: ['非常简单', '这门课，由我来结束'],
+      difficulty: 'advanced',
+      isCompleted: 1
     }
   ]);
 
-  function addComment(newComment, id) {
+  function addReview(newReview, id) {
     setCards(prevCards => 
       prevCards.map(card=>
-        card.id === id ? { ...card, comments: [...card.comments, newComment]} : card
+        card.id === id ? { ...card, reviews: [...card.reviews, newReview]} : card
       )
     )
   }
   return (
     <>
-      <CourseCardList cards={cards} addComment={addComment} />
+      <CourseCardList cards={cards} addReview={addReview} />
     </>
   )
 }
